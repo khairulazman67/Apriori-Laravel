@@ -8,17 +8,7 @@ use App\Imports\AprioriImport;
 
 class AprioriController extends Controller
 {
-    public function getData(){
-        $data = ['data' => 'dsad'];
-
-        if($data){
-            return ResponseFormatter::success($data,'Data Berhasil Diambil');
-        }else{
-            return ResponseFormatter::error(null,'Data Order Tidak Ada',404);
-        }
-    }
-
-    public function importExcelFile(Request $request){
+    public function getData(Request $request){
         function frekuensiItem($data)
         {
             $arr = [];

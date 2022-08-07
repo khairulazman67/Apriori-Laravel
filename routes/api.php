@@ -19,7 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/getdata', [AprioriController::class, 'getData']);
-
-
-Route::post('/tes', [AprioriController::class, 'importExcelFile']);
+Route::post('/getdata', [AprioriController::class, 'getData']);
